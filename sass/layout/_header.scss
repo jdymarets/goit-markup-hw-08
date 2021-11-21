@@ -32,23 +32,6 @@
   color: var(--accent-color);
 }
 
-.burger-btn,
-.close-btn {
-  padding: 0;
-  line-height: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  transition: fill 250ms var(--timing-function);
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
 
 .header-nav {
   display: flex;
