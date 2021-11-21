@@ -13,29 +13,26 @@
  &:not(:last-child) {
     margin-right: 50px;
   }
-  @media screen and (min-width: 1200px) {
-    margin-right: auto;
+}
+
+.contacts__link {
+  @include position();
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 
-// .contacts__link {
-//   @include position();
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: var(--second-text-color);
-//   transition: color 250ms var(--timing-function);
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
-
-// .contacts__icon {
-//   fill: currentColor;
-//   margin-right: 10px;
-//   justify-content: center;
-// }
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  justify-content: center;
+}
