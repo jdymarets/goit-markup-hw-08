@@ -71,6 +71,10 @@ img {
   border-radius: 2px;
 }
 
+.mobile-nav__link--current {
+  color: var(--accent-color);
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -371,15 +375,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
@@ -404,6 +401,7 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .header-nav__item:not(:last-child) {
@@ -548,6 +546,7 @@ img {
 @media screen and (max-width: 479px) {
   .mobile-social__list {
     flex-wrap: wrap;
+    margin-right: -20px;
   }
 }
 
@@ -573,10 +572,8 @@ img {
 }
 
 .contacts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-left: auto;
+  width: auto;
   text-decoration: none;
 }
 
@@ -586,18 +583,31 @@ img {
   }
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 50px;
+  }
 }
 
 .contacts__link {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
   transition: color 250ms var(--timing-function);
@@ -607,23 +617,87 @@ img {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    line-height: 1.14;
+  }
+}
+
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
-  justify-content: center;
+}
+
+.contacts__icon--mail {
+  width: 14px;
+  height: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts__icon--phone {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2f303a;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  max-width: 480px;
+  height: 480px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop2x.jpg);
+  }
 }
 
 .hero__container {
@@ -632,14 +706,22 @@ img {
 
 .hero__title {
   margin: auto;
-  width: 696px;
+  width: 360px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .benefits__list {

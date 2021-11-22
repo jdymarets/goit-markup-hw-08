@@ -29,6 +29,7 @@
 }
 
 .mobile-menu {
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,9 +47,9 @@
   transition: opacity 250ms var(--timing-function),
     visibility 250ms var(--timing-function);
 
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mobile-menu.is-open {
