@@ -50,7 +50,7 @@
   &:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
-
+  }
     @media screen and (min-width: 768px) {
       width: 354px;
       margin-top: 0px;
@@ -60,7 +60,7 @@
       margin-top: 0px;
     }
   }
-}
+
 
 .benefits__title {
   margin-top: 30px;

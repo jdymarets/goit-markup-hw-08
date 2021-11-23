@@ -1,7 +1,11 @@
 .works {
-    padding-top: 0px;
-    padding-bottom: 94px;
+  padding-top: 0px;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
+}
   .works__list {
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +17,8 @@
   }
   
   .works__card {
+    width: 370px;
+    height: 294px;
     position: relative;
     content: "";
     background-color: rgba(47, 48, 58, 0.8);

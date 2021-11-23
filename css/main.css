@@ -786,14 +786,14 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .benefits__icon:hover, .benefits__icon:focus {
+  .benefits__icon {
     width: 354px;
     margin-top: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .benefits__icon:hover, .benefits__icon:focus {
+  .benefits__icon {
     width: 270px;
     margin-top: 0px;
   }
@@ -826,6 +826,12 @@ img {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .works {
+    display: none;
+  }
+}
+
 .works__list {
   display: flex;
   flex-wrap: wrap;
@@ -838,6 +844,8 @@ img {
 }
 
 .works__card {
+  width: 370px;
+  height: 294px;
   position: relative;
   content: "";
   background-color: rgba(47, 48, 58, 0.8);
