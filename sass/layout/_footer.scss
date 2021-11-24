@@ -9,11 +9,12 @@
   @media screen and (min-width: 768px) {
     align-items: baseline;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .footer__container-address {
   @media screen and (min-width: 768px) {
-    margin-left: 76px;
     margin-right: 165px;
   }
   @media screen and (min-width: 1200px) {

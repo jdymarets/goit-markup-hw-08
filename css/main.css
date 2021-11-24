@@ -194,6 +194,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
@@ -206,15 +207,22 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 93px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) scale(1);
   padding: 40px;
-  min-height: 581px;
-  width: 528px;
+  min-height: 609px;
+  width: 450px;
   border-radius: 4px;
   background-color: var(--third-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    width: 528px;
+  }
 }
 
 .modal-form {
@@ -310,6 +318,7 @@ img {
   justify-content: center;
   margin-bottom: 30px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .policy__lebel::before {
@@ -321,6 +330,12 @@ img {
   border: 2px solid var(--primary-title-color);
   border-radius: 2px;
   transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function), background-image 250ms var(--timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .policy__lebel {
+    font-size: 14px;
+  }
 }
 
 .policy__text {
@@ -878,6 +893,7 @@ img {
   .team__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -1039,12 +1055,13 @@ img {
   .footer__container {
     align-items: baseline;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 768px) {
   .footer__container-address {
-    margin-left: 76px;
     margin-right: 165px;
   }
 }
@@ -1152,11 +1169,10 @@ img {
   fill: var(--third-text-color);
 }
 
-@media screen and (min-width: 768px) {
-  .form__position {
-    display: flex;
-    flex: wrap;
-  }
+.form-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subsribe-form__lebel:focus-within .subsribe-form__input {
