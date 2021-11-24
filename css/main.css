@@ -1160,15 +1160,38 @@ img {
   fill: currentColor;
 }
 
-.portfolio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
+@media screen and (min-width: 480px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
 }
 
-.portfolio__item:not(:first-child) {
-  margin-left: 10px;
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-bottom: 50px;
+  }
+}
+
+.portfolio__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__btn {
