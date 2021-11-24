@@ -1032,12 +1032,27 @@ img {
 }
 
 .footer__container {
-  align-items: baseline;
-  display: flex;
+  text-align: center;
 }
 
-.footer__container-address {
-  margin-right: 70px;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    align-items: baseline;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container-address {
+    margin-left: 76px;
+    margin-right: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container-address {
+    text-align: left;
+  }
 }
 
 .footer__logo {
@@ -1053,12 +1068,19 @@ img {
 }
 
 .footer__address {
+  margin-bottom: 60px;
   margin-top: 30px;
   font-style: normal;
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__address-text {
@@ -1093,14 +1115,22 @@ img {
   color: var(--third-text-color);
 }
 
-.footer-social {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    margin-right: 93px;
+  }
 }
 
 .footer-social__list {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-social__list {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-social__link {
@@ -1122,9 +1152,11 @@ img {
   fill: var(--third-text-color);
 }
 
-.form__position {
-  display: flex;
-  flex: wrap;
+@media screen and (min-width: 768px) {
+  .form__position {
+    display: flex;
+    flex: wrap;
+  }
 }
 
 .subsribe-form__lebel:focus-within .subsribe-form__input {
@@ -1132,7 +1164,7 @@ img {
 }
 
 .subsribe-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 16px 15px;
   color: rgba(255, 255, 255, 0.6);
@@ -1154,10 +1186,25 @@ img {
   border-color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .subsribe-form__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subsribe-form__input {
+    width: 358px;
+  }
+}
+
 .subsribe-form__btn {
-  margin-top: 0px;
-  margin-left: 12px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subsribe-form__icon {
