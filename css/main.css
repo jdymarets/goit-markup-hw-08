@@ -55,11 +55,11 @@ img {
   background-color: #000000;
 }
 
-.header-nav__link--current {
+.header-nav__link.current {
   color: var(--accent-color);
 }
 
-.header-nav__link--current::after {
+.header-nav__link.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -71,7 +71,7 @@ img {
   border-radius: 2px;
 }
 
-.mobile-nav__link--current {
+.mobile-nav__link.current {
   color: var(--accent-color);
 }
 
