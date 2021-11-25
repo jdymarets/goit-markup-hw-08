@@ -16,9 +16,9 @@
     }
   }
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
 
-    &:not(:nth-last-child(-n + 2)) {
+    &:not(:nth-last-child(-n + 1)) {
       margin-bottom: 30px;
     }
     &:nth-child(odd) {
@@ -33,7 +33,9 @@
   }
 }
 .examples__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms var(--timing-function);
 
   &:hover,
@@ -48,6 +50,7 @@
   position: relative;
   overflow: hidden;
   content: "";
+  
 }
 
 .examples__link:hover .examples__overlay-text,
@@ -55,7 +58,7 @@
   transform: translateY(0);
 }
 .examples__overlay-text {
-  padding-top: 71px;
+  padding-top: 49px;
   padding-left: 24px;
   padding-right: 24px;
   width: 100%;
@@ -65,11 +68,12 @@
   color: var(--third-text-color);
   position: absolute;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--timing-function);
 }
 
 .examples__description {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid var(--item-border);
   border-right: 1px solid var(--item-border);

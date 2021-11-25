@@ -17,8 +17,10 @@
   justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
 .header__logo {
-  margin-right: 90px;
+  margin-right: 88px;
+}
 }
 .header__logo-part {
   font-family: Raleway;

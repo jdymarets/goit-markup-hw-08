@@ -1,7 +1,8 @@
-.form-position {
-  display: flex;
-justify-content: center;
-align-items: center;
+.subscribe-form {
+  margin-top: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
 .subsribe-form__lebel:focus-within .subsribe-form__input {
   border-color: var(--accent-color);
@@ -26,10 +27,10 @@ align-items: center;
     outline: none;
     border-color: var(--accent-color);
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     width: 450px;
   }
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     width: 358px;
   }
 }
@@ -41,11 +42,23 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+    margin-left: 12px;
+  }
+}
 .subsribe-form__icon {
   margin-left: 10px;
   width: 24px;
   height: 24px;
   fill: currentColor;
+}
+
+.form__position {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
