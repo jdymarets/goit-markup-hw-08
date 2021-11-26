@@ -582,12 +582,11 @@ img {
 @media screen and (max-width: 479px) {
   .mobile-social__list {
     flex-wrap: wrap;
-    margin-right: -20px;
   }
 }
 
 .mobile-social__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mobile-social__item:not(:first-child)::before {
