@@ -66,6 +66,12 @@
 
 .hero__container {
   text-align: center;
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+}
+@media screen and (min-width: 1200px) {
+  max-width: 696px;
+}
 }
 .hero__title {
   margin: auto;
