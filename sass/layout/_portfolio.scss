@@ -15,10 +15,8 @@
 }
 
 .portfolio__item {
-  @media screen and (max-width: 767px) {
   &:not(:last-child) {
     margin-right: 8px;
-  }
 }
   @media screen and (max-width: 767px) {
     &:not(:nth-last-child(-n+2)) {

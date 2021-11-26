@@ -1277,10 +1277,8 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio__item:not(:last-child) {
-    margin-right: 8px;
-  }
+.portfolio__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {
